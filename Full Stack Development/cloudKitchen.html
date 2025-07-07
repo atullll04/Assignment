@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(230, 200, 27);
+        }   
+        .navbar{
+            background-color: rgb(240, 238, 237);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .heading{
+            font-size: 24px;
+            font-weight: bold;
+            
+        }
+        .nav-links{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block; 
+  margin-right: 10px; 
+}
+
+nav a {
+  text-decoration: none; 
+  color: #333; 
+}
+.form-container h1{
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.form-container p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.toggleForm{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #db1919;
+    color: #cbbebe;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.toggleForm a{
+    text-decoration: none;
+    color: #cbbebe;
+}
+.toggleForm a:hover{
+    color: #fff;
+}
+.toggleForm a:active{
+    color: #fff;
+}
+.delivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.delivery input{
+    width: 10%;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           <div class="heading">CloudKitchen</div>
+           <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="toggleForm">
+                <a href="cloudKitchenlogin.html">Login</a>
+            </div>
+           </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h1>Are you Starving</h1>
+            <p>Within a few clicks, find meals that are accessible near you</p>   
+        </div>
+        <div class="delivery">
+            <h3>Delivery</h3>
+            <input type="text" placeholder="Enter your Address">
+            <button>Find Food</button>
+        </div>
+        <div class="pickup">
+            <h3>Pickup</h3>
+            <input type="text" placeholder="Enter your Address">
+            <button>Find Food</button> 
+       
+        </div>
+    </div>
+</body>
+</html>

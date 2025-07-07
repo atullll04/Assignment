@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        h1{
+            color: rgb(235, 241, 247);
+
+        }
+        p{
+            color: rgb(246, 247, 248);
+        }
+        div{
+          padding: 50px;
+          margin: auto;
+
+        }
+        div h1 {
+            color: black;
+        }
+    </style> 
+</head>
+<body>
+   <div class="container">
+    <div class="left-side">
+        <h1>Let's Chat</h1>
+        <p>Whether you have a questin, want to start a project or simply want to connect
+            Feel free to send me a message in the contact form
+        </p>
+        <div class="right-side">
+            <h1>Contact</h1>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Required</legend>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <br><br>
+                    <input type="text" id="Email" name="Email" placeholder="Email" required>
+                    <br><br>
+                    <input type="text" id="Conmpany" name="Company" placeholder="Company" required>
+                    <br><br>
+                    <input type="text" id="Phone" name="Phone" placeholder="Phone" required>
+                    <br><br>
+                    <textarea id="Message" name="Message" cols="50" rows="5" placeholder="Message" ></textarea>
+                    <br><br>
+                    <button type="Submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+   </div> 
+</body>
+</html>

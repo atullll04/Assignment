@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgba(16, 23, 235, 0.5);
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd9, #002bff, #7a00ff, #ff00c8, #ff0000);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 10%;
+            left: 25%;
+            width: 100px;
+            height: 100px;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            width: 100px;
+            height: 100px;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            bottom: 10%;
+            left: 20%;
+            width: 100px;
+            height: 100px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .container {
+            background-color: white;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            padding: 40px;
+            z-index: 2;
+            overflow: hidden;
+            max-width: 90vw;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa726, #42a5f5, #ab47bc);
+            animation: gradient 3s ease infinite;
+            background-size: 300% 100%;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg,
+                    #a4de38 0%,
+                    rgb(119, 15, 15) 50%,
+                    #1e648f 0%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo p {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-container {
+            position: relative;
+        }
+
+        .form {
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .form-active {
+            display: block;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #00bcd4;
+            background: none;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #666;
+            pointer-events: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+.checkbox-group{
+    color: #666;
+}
+        .form-group input:focus+label,
+        .form-group input:not(:placeholder-shown)+label {
+            top: -15px;
+            left: 15px;
+            color: #00bcd4;
+            background: whitesmoke;
+            padding: 2px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0.2) 100%);
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .toggleForm {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .toggleForm p {
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .toggleForm button {
+            background: transparent;
+            border: none;
+            color: #00bcd4;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 5px;
+        }
+
+        .toggleForm button:hover {
+            color: #54067b;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="container">
+        <div class="food icon">🍳</div>
+        <div class="logo">
+            <h1>CloudKitchen</h1>
+            <p>Delecious Meals ,Delivered fresh</p>
+        </div>
+        <div class="form-container">
+            <div class="form-active" id="loginForm">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder=" " required />
+                            <label>Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder=" " required />
+                            <label>Password</label>
+                        </div>
+                        
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
+            <button type="submit" class="btn">Sign In</button>
+        
+                </form>
+                <div class="toggleForm">
+                    <p>Don't have an account?</p>
+                    <button type="button" class="toggle-btn" onclick="window.location.href='signUp.html'">Create Account</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
