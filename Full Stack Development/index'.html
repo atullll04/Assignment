@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        body{
+            color: #333;
+            background-color: rgb(218, 241, 241);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            background-color: aliceblue;
+            color: #333;
+            padding: 20px;
+        }
+        header h1{
+            font-size: 50px;
+        }
+        header p{
+            font-size: 20px;
+        }
+        nav{
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+        }
+        nav h2{
+            color: white;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        nav li{
+            background: #34495e;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        main{
+            padding: 30px;
+        }
+        section{
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            box-shadow: 20px 20px 20px rgba(17, 16, 16, 0.1);
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding: 20px 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 2px 0;
+        }
+        ul li {
+            list-style-type: none;
+            position: relative;
+        }
+        ul li::before {
+            content: "✔";  
+            color: #4ecdc4;
+            font-weight: bold;
+            position: absolute;
+            left: -15px 
+        }
+        ol li{
+            list-style-type: decimal;
+            color: #667eea;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+        }
+        a:hover{
+            color: #e1480b;
+            border-bottom-color: #b92929;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        }
+        figure{
+            margin:20px 0;
+            text-align: center;
+        }
+        figcaption{
+            margin-top: 5px ;
+            color:#7f8c8d;
+            font-style: italic;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px  ;
+            overflow: hidden ;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        caption{
+            padding:10px;
+            font-size: 20px;
+            font-weight: bold; 
+            color: #2c3e50;
+            background: #ecf0f1;
+        }
+
+        th,td{
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }   
+        th{
+            background-color: #2c3e50;
+            color:white;
+            font-weight: bold;
+        }
+        tr:nth-child(even){
+            background: #c3c5c3;
+        }  
+        tr:hover{
+            background: #e8f4fd;
+            transform: scale(1.05);
+
+        }
+    </style>
+</head>
+<body>
+    <Header><H1>Complete HTML Tags</H1>
+    <p>Thise page demonstrates all basic and advanced HTML tags witghout any CSS styling</p>
+    <h2>Table of contents</h2>
+    <nav><ul>
+        <li><a href="Text tags">Text Tags</a></li>
+        <li><a href="Lists">Lists</a></li>
+        <li><a href="Tables">Tables</a></li>
+        <li><a href="Froms">Froms</a></li>
+        <li><a href="Sementic Tags">Sementic Tags</a></li>
+        <li><a href="Advanced Tags">Advanced Tags</a></li>
+    </ul></nav>
+    </Header>
+    <main>
+        <h2>Text Tags</h2>
+        <h1>Hendling1</h1>
+        <h2>Hendling2</h2>
+        <h3>Hendling3</h3>
+        <h4>Hendling4</h4>
+        <h5>Hendling5</h5>
+        <h6>Hendling6</h6>
+        <h2>Paragraphs and Text Formatting</h2>  
+        <p>This is a regular paragraph with <Strong>bold text,</Strong>
+        <em>itallic text,</em>
+        <u>underlined text.</u></p>
+        <p>Here's text with <mark>Highlighting,</mark><del>deleted text,</del>
+        <ins>inserted text.</ins></p>
+        <p>This paragraph contains <small>small text</small> <big>big text</big></p>
+        <p>Methematical H<sub>2</sub>O and E=mc<sup>2</sup></p>
+        <blockquote><p>This is ablockquote.It's used for longer quotations.</p>
+        <cite>-Famous Author</cite>
+        </blockquote>
+        <p><q>Thise is an inline quote</q> within a paragraph</p>
+        <pre>
+            This is preformatted text.
+                It preserves    spaces
+                     and line breaks.
+                         Perfect for code!
+        </pre>
+        <code>console.log("This is inline code");</code>    
+        <kbd>ctrl + c </kbd> to copy 
+        <samp>program output examole</samp> 
+        <var>x=y+z</var> (mathematical variable)
+        <abbr title="Hyper text markup language">HTML</abbr>
+        <dfn>HTML</dfn>-Hyper text markup language
+        <br><br>
+        <address>
+            contact: John Doebr <br>
+            Email:john@example.Com <br>
+            phone:+1-234-567-8900 <br>
+        </address>
+    </main>
+    <section id="Lists">
+        <h2>Lists</h2>
+        <h3>Unorder Lists</h2>
+        <ul>
+            <li>First item</li>
+            <li>second item
+                <ul>
+                    <li>Nested item 1</li>
+                    <li>Nested item 2</li>
+                </ul>
+            </li>
+            <li>Third iten</li>
+        </ul>
+        <h3>Order Lists</h3>
+        <ol>
+            <li>First step</li>
+            <li>Second step</li>
+            <li>Thire step</li>
+        </ol>
+        <h3>Order Lists With Different Type</h3>
+        <ol type="A">
+            <li>Item A</li>
+            <li>Item B</li>
+        </ol>
+        <ol type="i">
+            <li>Roman number I</li>
+            <li>Roman number II</li>
+        </ol>
+        <H3>Description List</H3>
+        <li>HTML
+            <li>Hyper Text Markup</li>
+        </li>
+        <li>CSS
+            <li>Cascading Style Sheets</li>
+        </li>
+        <li>JavaScript
+            <li>Programming language for web development</li>
+        </li>
+    </section>
+    <section id="Links Media">
+    <h2>Links & Media</h2>
+    <h3>Links</h3>
+    <p>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#chat/home" target="_blank">visite Email</a>
+    </p>
+    <p>
+        <a href="https://www.oracle.com/java/" target="_blank">visite java</a>
+    </p>
+    <p>
+        <a href="https://openai.com/index/chatgpt/" target="_blank">visite chatgpt</a>
+    </p>
+    <h3>Images</h3>
+    <img src="fire.logo.png" alt="fire" width="300" height="300">
+    <h3>Audio</h3>
+    <audio controls>
+        <source src="demo.audio.mp4" type="audio/mp4">
+    </audio>
+    <h3>Video</h3>
+    <video width="400" height="400" controls>
+        <source src="a.video.mp4" type="video/mp4">
+    </video>
+    <h3>Embedded Content</h3>
+            <iframe src="https://www.example.com" width="400" height="300" title="Embedded content"> <Inline frame for embedding>
+                <Your browser does not support iframes>
+            </iframe> 
+    </section>
+    <section id="tables">
+        <h2>Table</h2>
+        <table border="1">
+            <caption>Student Grades tables</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>Status</th>
+                </tr>    
+            </thead>
+            <tbody>    
+                <tr>
+                    <th>Prebhas</th>
+                    <th>Chemistry</th>
+                    <th>67</th>
+                    <th>Passed</th>
+                </tr>
+                <tr>
+                    <th>Vicky</th>
+                    <th>Science</th>
+                    <th>55</th>
+                    <th>Passed</th>
+                </tr>
+                <tr>
+                    <th>Rahul</th>
+                    <th>Marathi</th>
+                    <th>88</th>
+                    <th>Passed</th>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Average</td>
+                    <td>52.5</td>
+                    <td>--</td>
+                </tr>
+            </tfoot>
+        </table>
+        <table>
+            <h3>Table with Merged Cells</h3>
+            <table border="2">
+                <tr>
+                    <th rowspan="2">Name</th>
+                    <th colspan="2">Scores</th>
+                </tr>
+                <tr>
+                    <th>Text1</th>
+                    <th>Text2</th>
+                </tr>
+                <tr>
+                    <th>Rahul</th>
+                    <th>85</th>
+                    <th>90</th>
+                </tr>
+            </table>
+        </table>
+    </section>
+    <section id="Form">
+        <h3>Personal Insformtion</h3>
+        <form action="#" method="Post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="Fname">Fist Name:</label>
+                <input type="text" id="Fname" name="Fname" required>
+                <br><br>
+                <label for="Lname">Last Name:</label>
+                <input type="text" id="Lname" name="Lname" required>
+                <br><br>
+                <label for="Email">Email:</label>
+                <input type="Email" name="Email" id="Email" required>
+                <br><br>
+                <label for="phone">phone:</label>
+                <input type="tel" id="Phone" name="Phone" required>
+                <br><br>
+                <label for="Date">Date:</label>
+                <input type="date" id="Date" name="Date" required>
+                <br><br>
+                <label for="Age">Age:</label>
+                <input type="number" id="Age" name="Age" required>
+                <br><br>
+                <label for="WebSite">WebSite:</label>
+                <input type="url" id="WebSite" name="WebSite" required>
+                <br><br>
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" required>
+                <br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="country">Country:</label>
+                <select id="country" name="country" >
+                    <option value="">Select country</option>
+                    <option value="India">India</option>
+                    <option value="Canada">Canada</option>
+                    <option value="USA">USA</option>
+                </select>
+                <br><br>
+                <label for="skill">Skill:</label>
+                <select id="skill" name="skill" multiple>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="paython">Paython</option>
+                    <option value="r">R</option>
+                    <option value="yaml">Yaml</option>
+                </select>
+                <br><br>
+                <p>Gender:</p>
+                <input type="radio" id="Male" name="Gender" value="Male">
+                <label for="Male">Male</label><br>
+                <input type="radio" id="Female" name="Gender" value="Female">
+                <label for="Female">Female</label><br>
+                <input type="radio" id="Other" name="Gender" value="Other">
+                <label for="Other">Other</label><br>
+                <p>Interests (check all that apply):</p>
+                <input type="checkbox" id="Coding" name="Interests" value="coding">
+                <label for="coding">Coding</label><br>
+                <input type="checkbox" id="Disign" name="Interests" value="Design">
+                <label for="Design">Design</label><br>
+                <input type="checkbox" id="Music" name="Interests" value="Music">
+                <label for="Music">Music</label><br>
+
+                <label for="range">Experience Level(1-10):</label>
+                <input type="range" id="range" name="experience" min="1" max="10" value="5">
+                <br><br>
+
+
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color" value="#ff0000">
+                <br><br>
+
+                <label for="file">Upload Resume:</label>
+                <input type="file" id="file" name="resume" accept=".pdf,.doc,.docx">
+                <br><br>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="60" placeholder="Enter your comments here..."></textarea>
+            </fieldset>
+        </form>
+    </section >
+</body>
+</html>

@@ -5,55 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            background-color: aqua;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body{
+        background-color: #169fe8;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+       }
+       .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+       }
+       .left-side{
+        max-width: 600px;
+        width: 100%;
+        height: 100vh;
+        background-color: #118df2;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-        }
-        h1{
-            color: rgb(235, 241, 247);
-
-        }
-        p{
-            color: rgb(246, 247, 248);
-        }
-        div{
-          padding: 50px;
-          margin: auto;
-
-        }
-        div h1 {
-            color: black;
-        }
+       }
+       .left-side h1{
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+       }
+       .left-side p{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 20px;
+       }
+       .right-side{
+        max-width: 700px;
+        width: 100%;
+        height: 100vh;
+        background-color: #f0f0f0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       }
+       .right-side h1{
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        color: #0f0d0d;
+        margin-bottom: 20px;
+       }
+       .right-side legend{
+        font-size: 16px;
+        font-weight: 600;
+        color: #0f0d0d;
+        margin-bottom: 20px;
+        display: flex;
+       }
+       .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+       }
+       
+       .form input{
+        width: 100%;
+        padding: 10px;
+        border: #fff;
+        border-radius: 5px;
+        
+       }
+       .button{
+        width: 50%;
+        padding: 20px;
+        color: #000;
+        background-color: #118df2;
+        
+       }
+       
     </style> 
 </head>
 <body>
    <div class="container">
     <div class="left-side">
         <h1>Let's Chat</h1>
-        <p>Whether you have a questin, want to start a project or simply want to connect
-            Feel free to send me a message in the contact form
-        </p>
+        <p>Whether you have a questin, want to start a project or simply want to connect</p>
+           <p> Feel free to send me a message in the contact form</p>
+        
+    </div>
         <div class="right-side">
             <h1>Contact</h1>
             <form action="#" method="post">
-                <fieldset>
-                    <legend>Required</legend>
+               
+                    <legend>*Required</legend>
                     <input type="text" id="name" name="name" placeholder="Name" required>
                     <br><br>
                     <input type="text" id="Email" name="Email" placeholder="Email" required>
                     <br><br>
-                    <input type="text" id="Conmpany" name="Company" placeholder="Company" required>
+                    <input type="text" id="Company" name="Company" placeholder="Company" required>
                     <br><br>
                     <input type="text" id="Phone" name="Phone" placeholder="Phone" required>
                     <br><br>
                     <textarea id="Message" name="Message" cols="50" rows="5" placeholder="Message" ></textarea>
                     <br><br>
-                    <button type="Submit">Submit</button>
-                </fieldset>
+                   
             </form>
+            <button type="Submit">Submit</button>
+                
         </div>
-    </div>
+    
    </div> 
 </body>
 </html>

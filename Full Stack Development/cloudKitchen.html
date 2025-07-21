@@ -45,12 +45,22 @@ nav a {
   text-decoration: none; 
   color: #333; 
 }
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #d3e50e;
+
+}
 .form-container h1{
     padding: 20px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
+ 
 }
 .form-container p{
     justify-content: center;
@@ -58,9 +68,10 @@ nav a {
     display: flex;
 }
 .toggleForm{
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+   
     padding: 10px;
     border-radius: 10px;
     background-color: #db1919;
@@ -78,18 +89,37 @@ nav a {
 .toggleForm a:active{
     color: #fff;
 }
-.delivery{
+.form-group{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    border-radius: 20px;
+    background-color: white;
+    padding:  10px;
+    width: 100%;
+    
+}
+.form-group form{
+    padding: 10px;
+    width: 20;
+    height: 50%;
+    box-sizing: border-box;
+
 }
 .delivery input{
     width: 10%;
-    padding: 1px;
+    padding: 10px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    margin-top: 10px;
 }
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #db1919;
+}
+
 
 
     </style>
@@ -110,22 +140,25 @@ nav a {
            </div>
         </nav>
     </header>
+   <section class="main">
     <div class="container">
         <div class="form-container">
             <h1>Are you Starving</h1>
             <p>Within a few clicks, find meals that are accessible near you</p>   
+        
+        <div class="form-group">
+            <form>
+                <button class="Delivery">Delivery</button>
+                <button class="Pickup">Pickup</button>
+                <br><br>
+                <input type="text" placeholder="Enter your Address">
+                <br><br>
+                <button class="Find Food">Find Food</button>
+
+            </form>
         </div>
-        <div class="delivery">
-            <h3>Delivery</h3>
-            <input type="text" placeholder="Enter your Address">
-            <button>Find Food</button>
-        </div>
-        <div class="pickup">
-            <h3>Pickup</h3>
-            <input type="text" placeholder="Enter your Address">
-            <button>Find Food</button> 
-       
         </div>
     </div>
+   </section>
 </body>
 </html>
